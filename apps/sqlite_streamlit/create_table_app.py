@@ -5,16 +5,17 @@ import pandas as pd
 
 import db_util as db
 
-APP_ROOT = "apps/sqlite_streamlit"
+# APP_ROOT = "apps/sqlite_streamlit"
 
 logging.basicConfig(
-    filename=f"{APP_ROOT}/logs/create_table_app.log",
+    filename=f"logs/create_table_app.log",
     format="%(asctime)s - [%(levelname)s] %(message)s",
     datefmt="%Y-%m-%d %H:%M",
     level=logging.INFO,
 )
 logger = logging.getLogger(__name__)
 
+################
 st.title("Create Table with CSV file")
 ################
 
@@ -40,7 +41,7 @@ if st.button("Create table"):
     logger.info(f"Uploaded file head: {df.head(3)}")
 
     # save temp csv file
-    tmp_file_path = f"{APP_ROOT}/data/tmp_{db_name}.{tbl_name}.csv"
+    tmp_file_path = f"data/tmp_{db_name}.{tbl_name}.csv"
     logger.info(f"Temp file path: {tmp_file_path}")
     df.to_csv(tmp_file_path, index=False)
 

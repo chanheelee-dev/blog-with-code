@@ -5,7 +5,7 @@ import pandas as pd
 from sqlalchemy import create_engine, inspect, text
 
 
-DB_DIR = "apps/sqlite_streamlit/data"
+DB_DIR = "data"
 
 
 def get_database_names():
