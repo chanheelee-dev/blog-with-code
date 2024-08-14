@@ -4,7 +4,7 @@ import pandas as pd
 import db_util as db
 
 
-st.title("SQL Demo")
+st.title("Query Your Data")
 ################
 
 st.subheader("Database and Tables")
@@ -27,6 +27,7 @@ query = st.text_area(
     label="Enter your SQL query here",
     value=f"SELECT * FROM {default_table_name} LIMIT 10;",
 )
+
 
 # run query and show result
 def run_query(db_name, query):

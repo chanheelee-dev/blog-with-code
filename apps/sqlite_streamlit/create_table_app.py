@@ -15,21 +15,28 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-st.title("Upload CSV")
+st.title("Create Table with CSV file")
 ################
 
-uploaded_file = st.file_uploader(label="Upload a CSV file", type=["csv"])
-st.write("CSV file preview:")
+st.subheader("Upload CSV file")
+uploaded_file = st.file_uploader(label="Select a file", type=["csv"])
+# st.write("CSV file preview:")
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
     st.write(df.head(10))
 
+################
+st.divider()
+################
 
-db_name = st.text_input(label="Enter a database name")
+st.subheader("Create Table")
+db_name = st.text_input(label="Enter the target database")
 tbl_name = st.text_input(label="Enter a table name")
 
 if st.button("Create table"):
-    logger.info(f"Creating table {db_name}.{tbl_name} with data from {uploaded_file.name}")
+    logger.info(
+        f"Creating table {db_name}.{tbl_name} with data from {uploaded_file.name}"
+    )
     logger.info(f"Uploaded file head: {df.head(3)}")
 
     # save temp csv file
@@ -39,4 +46,6 @@ if st.button("Create table"):
 
     # create table
     db.create_table_with_csv(tmp_file_path, db_name, tbl_name)
-    st.success(f"Table {db_name}.{tbl_name} created with data from {uploaded_file.name}")
+    st.success(
+        f"Table {db_name}.{tbl_name} created with data from {uploaded_file.name}"
+    )
