@@ -168,7 +168,7 @@ lxml = ["lxml"]
 name = "black"
 version = "24.8.0"
 description = "The uncompromising code formatter."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.8"
 
@@ -989,7 +989,7 @@ python-versions = ">=3.7"
 name = "mypy-extensions"
 version = "1.0.0"
 description = "Type system extensions for programs checked with the mypy type checker."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.5"
 
@@ -1076,6 +1076,17 @@ traitlets = ">=5.1"
 [package.extras]
 docs = ["myst-parser", "pydata-sphinx-theme", "sphinx", "sphinxcontrib-github-alt", "sphinxcontrib-spelling"]
 test = ["pep440", "pre-commit", "pytest", "testpath"]
+
+[[package]]
+name = "nbstripout"
+version = "0.7.1"
+description = "Strips outputs from Jupyter and IPython notebooks"
+category = "dev"
+optional = false
+python-versions = ">=3.8"
+
+[package.dependencies]
+nbformat = "*"
 
 [[package]]
 name = "nest-asyncio"
@@ -1210,7 +1221,7 @@ testing = ["docopt", "pytest"]
 name = "pathspec"
 version = "0.12.1"
 description = "Utility library for gitignore style pattern matching of file paths."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.8"
 
@@ -1813,7 +1824,7 @@ test = ["pytest", "ruff"]
 name = "tokenize-rt"
 version = "6.0.0"
 description = "A wrapper around the stdlib `tokenize` which roundtrips."
-category = "main"
+category = "dev"
 optional = false
 python-versions = ">=3.8"
 
@@ -1965,7 +1976,7 @@ python-versions = ">=3.7"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "76aff4d3f809a21737a61c0c5646d896eb45d99c594f8290c6f7cccff4ed5b02"
+content-hash = "60a6f86880db047d021442d69fb2cb28659fe00a80cf76f376d91190ad9465a9"
 
 [metadata.files]
 altair = [
@@ -2797,6 +2808,10 @@ nbconvert = [
 nbformat = [
     {file = "nbformat-5.10.4-py3-none-any.whl", hash = "sha256:3b48d6c8fbca4b299bf3982ea7db1af21580e4fec269ad087b9e81588891200b"},
     {file = "nbformat-5.10.4.tar.gz", hash = "sha256:322168b14f937a5d11362988ecac2a4952d3d8e3a2cbeb2319584631226d5b3a"},
+]
+nbstripout = [
+    {file = "nbstripout-0.7.1-py2.py3-none-any.whl", hash = "sha256:dfb0688b42b02ff13925e583313fc009c87342ad13b79ae0329357749aa6ed0c"},
+    {file = "nbstripout-0.7.1.tar.gz", hash = "sha256:2aad3454dc13e356f2fc94917856bc44f2bed3add77e8ba9f3a78003074bcd84"},
 ]
 nest-asyncio = [
     {file = "nest_asyncio-1.6.0-py3-none-any.whl", hash = "sha256:87af6efd6b5e897c81050477ef65c62e2b2f35d51703cae01aff2905b1852e1c"},
