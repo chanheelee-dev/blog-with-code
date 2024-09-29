@@ -18,6 +18,7 @@ matplotlib = "^3.9.0"
 plotly = "^5.22.0"
 streamlit = "^1.37.1"
 sqlalchemy = "^2.0.32"
+polars = "^1.7.1"
 
 
 [tool.poetry.group.dev.dependencies]
