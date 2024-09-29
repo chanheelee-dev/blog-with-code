@@ -20,6 +20,7 @@ streamlit = "^1.37.1"
 sqlalchemy = "^2.0.32"
 polars = "^1.7.1"
 websockets = "^13.1"
+pillow = "^10.4.0"
 
 
 [tool.poetry.group.dev.dependencies]
